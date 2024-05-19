@@ -19,6 +19,9 @@ Find two bugs and fix them.
 
 <br><br>
 
+<b>Bugs found & fixed:</b> <br>
+
+<br>
 <b>Resources:</b> <br>
 <b>GitHub:</b>  <br>
 
