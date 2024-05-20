@@ -1,14 +1,15 @@
 // imports typically live here
-import { useState } from 'react'
+import { Key, useState } from 'react'
 import { FaRegEdit } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
+import { FaRegWindowClose } from "react-icons/fa";
 import styles from './Todo.module.css'
 
 // our interface with props we will use go here
 interface TodoItem {
     id: number
     taskName: string
-    done: Boolean
+    done: boolean
 }
 
 const Todo = () => {
@@ -33,9 +34,22 @@ const Todo = () => {
     }
 
     // create a delete function and connect it to the X on the delete button in the li of our organized list
+    const deleteTodoItem = (id:Key) => {
+        const deleteListItem = list.filter((item) => item.id !== id);
+        setList(deleteListItem);
+    };
 
     // create an edit/update function and connect it to the pencil icon which sits to the left of the X delete button
     
+    const toggleDone = (id: Key) => {
+        const updatedList = list.map((item) =>
+          item.id === id ? { ...item, done: !item.done } : item
+        );
+        setList(updatedList);
+    };
+
+
+
 
   return (
     <>
@@ -47,18 +61,18 @@ const Todo = () => {
                 <button className='addButton' onClick={()=>addToDo(input)}>Add</button>
             </div>
 
-            {/* render list items within an ol inside of li tags that will be mapped with our list array */}
+            {/* render list items within an ul inside of li tags that will be mapped with our list array */}
             {/* I want to create onMouseOver to change the icon to its negative <FaEdit /> HOW TO DO? */}
-            <ol>
+            <ul>
                 {list.map(item => (
                     <li key={item.id}>
+                        <input type="checkbox" checked={item.done} onChange={()=> toggleDone(item.id)} />
                         {item.taskName}
                         <button className='editButton'><FaRegEdit /></button>
-                        <button>X</button>
-
+                        <button className='deleteButton' onClick={()=> deleteTodoItem(item.id)}><FaRegWindowClose /></button>
                     </li>
                 ))}
-            </ol>
+            </ul>
         </div>
     </>
   )
