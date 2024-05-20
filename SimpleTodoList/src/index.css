@@ -1,9 +1,10 @@
 
 body {
-  background-color: cornflowerblue;
-  background-image: url('./Assets/todolistBackground.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgb(25, 41, 71);
+  /* background-image: url('./Assets/todolistBackground.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  
 }
 
 
