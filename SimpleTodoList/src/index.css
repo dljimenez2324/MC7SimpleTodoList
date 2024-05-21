@@ -4,12 +4,26 @@ body {
   /* background-image: url('./Assets/todolistBackground.jpg'); */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
-  
+  color: whitesmoke;
 }
 
+ul {
+  padding: 0;
+}
 
+li {
+  list-style: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
+.checkboxStyle {
+  margin-right: 1rem;
+}
 
+.editButton {
+  margin-left: 1rem;
+}
 
 
 

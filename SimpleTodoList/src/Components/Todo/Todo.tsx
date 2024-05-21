@@ -19,28 +19,52 @@ const Todo = () => {
     // useState for tracking our list
     const [list, setList] = useState<TodoItem[]>([]);
 
+    // useState for editing our list after click edit button which will hold
+
+    
+    // useState for input for editing
+    const [editInput, setEditInput] = useState('')
+
+    // useState for tracking the actual value from the editInput 
+
+
+    // helper function
+    const editTodoList = (id:Key , text:string) => {
+        
+    }
+ 
+
     // function to add items to our list and clear the input field after function is run
+
+    // add check for if empty input
     const addToDo = (newItem:string) => {
 
+        // check if the input is empty by looking for white space
+        // if(newItem !== '') {
+
+        // }
         // create an object that will add new items to our list
         const newTodo:TodoItem = {
-            id: Math.floor(Math.random()*1000),
+            id: Math.random(),
             taskName: newItem,
             done: false
         }
         setList([...list,newTodo]);
         setInput("");
         console.log(`New item ID is ${newTodo.id}`)
+
     }
 
     // create a delete function and connect it to the X on the delete button in the li of our organized list
-    const deleteTodoItem = (id:Key) => {
+    const deleteTodoItem = (id: Key) => {
         const deleteListItem = list.filter((item) => item.id !== id);
         setList(deleteListItem);
     };
 
     // create an edit/update function and connect it to the pencil icon which sits to the left of the X delete button
     
+
+    // toggleDone is in order to make the check box be check as on or off corresponding to true or false respectively
     const toggleDone = (id: Key) => {
         const updatedList = list.map((item) =>
           item.id === id ? { ...item, done: !item.done } : item
@@ -66,8 +90,8 @@ const Todo = () => {
             <ul>
                 {list.map(item => (
                     <li key={item.id}>
-                        <input type="checkbox" checked={item.done} onChange={()=> toggleDone(item.id)} />
-                        {item.taskName}
+                        <input type="checkbox" className='checkboxStyle' checked={item.done} onChange={()=> toggleDone(item.id)} />
+                        {item.taskName}   
                         <button className='editButton'><FaRegEdit /></button>
                         <button className='deleteButton' onClick={()=> deleteTodoItem(item.id)}><FaRegWindowClose /></button>
                     </li>
