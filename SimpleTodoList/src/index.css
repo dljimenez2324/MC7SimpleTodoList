@@ -25,6 +25,8 @@ li {
 
 button {
   margin: .2rem;
+  border: none;
+
 }
 
 .listContainer {
@@ -50,8 +52,9 @@ button {
   margin-left: 1rem;
 }
 
-.deleteButton {
-
+.addButton {
+  border: solid;
+  border-width: 1px;  
 }
 
 .checkboxStrike {

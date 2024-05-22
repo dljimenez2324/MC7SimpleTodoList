@@ -121,14 +121,14 @@ const Todo = () => {
                     setEditingId(item.id);
                     setEditInput(item.taskName);
                 }}>
-                <FaRegEdit />
+                <FaRegEdit size={18} />
               </button>
               <button
                 className="deleteButton"
                 title="delete task on list"
                 onClick={() => deleteTodoItem(item.id)}
               >
-                <FaRegWindowClose />
+                <FaRegWindowClose size={18} />
               </button>
             </li>
           ))}
