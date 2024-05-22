@@ -16,7 +16,6 @@ Stylize your To-Do list. This means styling your application in a thoughtful and
 
 Find two bugs and fix them.
 
-
 <br>
 
 <b>Bugs found & fixed:</b> <br>
