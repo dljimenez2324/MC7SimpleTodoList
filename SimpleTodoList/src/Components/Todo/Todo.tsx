@@ -19,20 +19,14 @@ const Todo = () => {
     // useState for tracking our list
     const [list, setList] = useState<TodoItem[]>([]);
 
-    // useState for editing our list after click edit button which will hold
+    // useState for holding the id that we want to edit
+    const [editingId, setEditingId] = useState<Key>('');
 
     
     // useState for input for editing
     const [editInput, setEditInput] = useState('')
 
-    // useState for tracking the actual value from the editInput 
 
-
-    // helper function
-    const editTodoList = (id:Key , text:string) => {
-        
-    }
- 
 
     // function to add items to our list and clear the input field after function is run
 
@@ -62,7 +56,9 @@ const Todo = () => {
     };
 
     // create an edit/update function and connect it to the pencil icon which sits to the left of the X delete button
-    
+    const editTodoList = (id:Key , newtext:string) => {
+
+    }
 
     // toggleDone is in order to make the check box be check as on or off corresponding to true or false respectively
     const toggleDone = (id: Key) => {

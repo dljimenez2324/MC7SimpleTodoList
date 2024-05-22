@@ -1,11 +1,13 @@
 
 body {
   background-color: rgb(25, 41, 71);
-  /* background-image: url('./Assets/todolistBackground.jpg'); */
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  color: whitesmoke;
+  background-image: url('./Assets/media/top-view-desk-with-notebooks-succulent-plant.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
 }
+
+
 
 ul {
   padding: 0;
@@ -17,6 +19,19 @@ li {
   margin-bottom: 1rem;
 }
 
+.listContainer {
+
+  transform: translate(300%, -10%);
+  height: 60vh;
+  width: 20%;
+  margin-right: 14rem;
+  margin-top: 10rem;
+  padding-top: 0.1rem;
+  padding-left: 1rem;
+  background-image: url('./Assets/media/note_paper_background_with_hole_punches.jpg');
+
+}
+
 .checkboxStyle {
   margin-right: 1rem;
 }
@@ -24,7 +39,6 @@ li {
 .editButton {
   margin-left: 1rem;
 }
-
 
 
 
