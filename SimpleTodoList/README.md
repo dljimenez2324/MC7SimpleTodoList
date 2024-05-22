@@ -17,7 +17,7 @@ Stylize your To-Do list. This means styling your application in a thoughtful and
 Find two bugs and fix them.
 
 
-<br><br>
+<br>
 
 <b>Bugs found & fixed:</b> <br>
 * when trying to add react icons to my Todo.tsx in the return I saw this error on my localhost screen "Cannot find module 'react-icons/fa' or its corresponding type declarations.ts(2307)"
