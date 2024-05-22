@@ -31,6 +31,6 @@ https://frontend.turing.edu/lessons/module-1/js-truthy-falsy-expressions.html <b
 <b>GitHub:</b> https://github.com/dljimenez2324/MC7SimpleTodoList <br>
 
 
-Peer Reviewed by: name here <br>
-Comments: <br> 
-comment here 
+Peer Reviewed by: Aaron Perez <br>
+Comments: <br>  
+The todo list meets all the requirements, there is add, delete, edit buttons and a strikeout task checkbox. I like the post it note design for the list. Great job.
