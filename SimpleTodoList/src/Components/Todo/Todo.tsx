@@ -85,7 +85,7 @@ const Todo = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button className="addButton" onClick={() => input ? addToDo(input) : null}>
+          <button className="addButton" title="Add task to list" onClick={() => input ? addToDo(input) : null}>
             Add
           </button>
         </div>
@@ -116,6 +116,7 @@ const Todo = () => {
                 item.taskName
               )}
               <button className="editButton"
+                title="edit task on the list"
                 onClick={() => {
                     setEditingId(item.id);
                     setEditInput(item.taskName);
@@ -124,6 +125,7 @@ const Todo = () => {
               </button>
               <button
                 className="deleteButton"
+                title="delete task on list"
                 onClick={() => deleteTodoItem(item.id)}
               >
                 <FaRegWindowClose />
