@@ -23,6 +23,7 @@ Find two bugs and fix them.
 * when trying to add react icons to my Todo.tsx in the return I saw this error on my localhost screen "Cannot find module 'react-icons/fa' or its corresponding type declarations.ts(2307)"
   * In order to fix this, I found that I had to run "npm install react-icons --save" in order for my react-icons to be imported in my  node_modules
   * After installing I would use this site "https://react-icons.github.io/react-icons/" to find the exact icons I wish to use and import the icon and use the tag as required
+* 
 <br>
 <b>Resources:</b> <br>
 <b>GitHub:</b>  <br>

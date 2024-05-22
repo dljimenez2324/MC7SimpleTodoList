@@ -1,9 +1,9 @@
 // imports typically live here
 import { Key, useState } from "react";
 import { FaRegEdit } from "react-icons/fa";
-import { FaEdit } from "react-icons/fa";
+// import { FaEdit } from "react-icons/fa";
 import { FaRegWindowClose } from "react-icons/fa";
-import styles from "./Todo.module.css";
+
 
 // our interface with props we will use go here
 interface TodoItem {
@@ -60,10 +60,11 @@ const Todo = () => {
   };
 
   // create a stop editing
-  const editStop = () => {
-    setEditingId("");
-    setEditInput("");
-  };
+//   const editStop = () => {
+//     setEditingId("");
+//     setEditInput("");
+//   };
+
 
   // toggleDone is in order to make the check box be check as on or off corresponding to true or false respectively
   const toggleDone = (id: Key) => {
@@ -84,7 +85,7 @@ const Todo = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
-          <button className="addButton" onClick={() => addToDo(input)}>
+          <button className="addButton" onClick={() => input ? addToDo(input) : null}>
             Add
           </button>
         </div>
@@ -93,14 +94,15 @@ const Todo = () => {
         {/* I want to create onMouseOver to change the icon to its negative <FaEdit /> HOW TO DO? */}
         <ul>
           {list.map((item) => (
-            <li key={item.id}>
+            <li key={item.id} className= {item.done ? "checkboxStrike" : "" }>
+              {/* this is for the checkbox */}
               <input
                 type="checkbox"
-                className="checkboxStyle"
+                className="checkboxStyle "
                 checked={item.done}
                 onChange={() => toggleDone(item.id)}
               />
-              {/* {item.taskName}    */}
+              {/* this ternary is when editingID is equal to the regular item id then it will open an input field  when false it keeps the same taskname as when orginally added */}
               {editingId === item.id ? (
                 <input
                   type="text"
